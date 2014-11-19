@@ -4,8 +4,7 @@ CSI2372_FinalProject
 Group 42's final project.
 
 
-##CSI2372 - Final Project
-Fall 2014 
+##CSI2372 - Final Project - Fall 2014 
 ===================
 ###A Boardgame Over view
 In this project, you are asked to program a game that is played on a game board (a grid of squares). The
