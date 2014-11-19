@@ -4,9 +4,8 @@ CSI2372_FinalProject
 Group 42's final project.
 
 
-##CSI2372
-##Project
-##Fall 2014
+##CSI2372 - Final Project
+Fall 2014 
 ===================
 ###A Boardgame Over view
 In this project, you are asked to program a game that is played on a game board (a grid of squares). The
@@ -16,11 +15,11 @@ right). When a player arrives on a square, the player has the ability to perform
 allow different actions involving trading goods. The goal of the game is to acquire rubies.
 
 ###GameBoard
-Create a parameterized class (template) for the game board having a grid builder giving the number of
-rows and columns required. The squares of the grid are of type T. In addition, each square can hold one or
-more players of type J; there are N players. The squares are identified by row and column number (just as
-in chess). Players are identified by name. In the following we will refer to the squares on the gameboard
-as tiles. The GameBoard` class requires the following functions:
+Create a _parameterized class (template)_ for the **game board** having a **grid builder** giving the number of
+`rows` and `columns` required. The *squares* of the grid are of `type T`. In addition, each square can hold *one or
+more players* of `type J`; there are N players. _The squares are identified_ by `row` and `column` number (just as
+in chess). Players are identified by `name`. In the following we will refer to the squares on the `gameboard`
+as `tiles`. The `GameBoard` class requires the following functions:
 * `void add(const T& tile, int row, int col);`
 * `const T& getTile(int row, int col) const;`
 * `void getCoordinate(const T &tile, int *row, int *col) const;`
@@ -33,7 +32,7 @@ as tiles. The GameBoard` class requires the following functions:
 If applicable, these methods should return an exception of type `std::out_of_range`.
 
 ###Tile
-Create a base class `Tile` which will let players execute actions. The function of action should only
+Create a base class `Tile` which will let players execute *actions*. The function of action should only
 permit players to execute an action if this action is possible.
 * `bool operator==(const Tile &t);`
 * `virtual bool action( Player& player );`
@@ -41,63 +40,69 @@ permit players to execute an action if this action is possible.
 * `ostream& operator<<`
 
 ###Player
-Create a `Player` class that will hold all the items a player has in his/her possession. The player
-is carrying these items in a cart with limited capacity. You will need the class variables:
-* `gold` Holds the number of pieces of gold.
-* `ruby` The number of ruby gemstones.
-* `Spice` The number of sacks of spices.
-* `fabric` The number of rolls of fabric.
-* `jewel` The number of pieces of jewellry.
-* `cart` The capacity of the cart.
-* `food` The number of food items`
+Create a `Player` class that will hold all the *items* a player has in his/her possession. The player
+is carrying these items in a `cart` with limited capacity. You will need the _class variables_:
+* `gold` : Holds the number of pieces of gold.
+* `ruby` : The number of ruby gemstones.
+* `Spice` : The number of sacks of spices.
+* `fabric` : The number of rolls of fabric.
+* `jewel` : The number of pieces of jewellry.
+* `cart` : The capacity of the cart.
+* `food` : The number of food items`
 
 * `bool canAct() const; // returns true if food > 0`
 * `bool pay( Player& player );`
 * `void eat(); // reduces food count by 1 if food > 0`
 * 
-Each player starts with 5 pieces of gold, no ruby, 1 sack of spices, 1 roll of fabric, 1 jewel, and 10 food
-items. The cart has an initial capacity of 9, which is the maximum number of goods (spices, fabrics,
-jewelry and rubys) that a player can have at one time. When a player moves to a tile, the player can
-choose to perform an action corresponding to the type of the tile. Each action costs a player a food item.
-Without food items the player can still move but the player cannot perform actions. When other players
-are on the tile that the player lands on, the player must pay a piece of gold to all these other players but
-only when performing an action.
+Each `player` starts with 5 pieces of `gold`, no `ruby`, 1 sack of `spices`, 1 roll of `fabric`, 1 `jewel`, and 10 `food`
+items. The `cart` has an _initial_ capacity of 9, which is the _maximum number of goods_ (`spice`'s, `fabric`'s,
+`jewelry`(jewels) and `ruby`(rubies) ) that a `player` can have at one time. When a player moves to a `tile`, the `player` can choose to perform an action corresponding to the type of the `tile`. Each action *costs* a player a `food` item.
+*Without food items* the player can still move __but__ the player _cannot_ perform actions. When other `players`
+are on the `tile` that the player lands on, the player *must* pay a piece of gold to _all these other players_ but
+*only when performing an action*.
 
 ###Tile derivatives
 Besides the base class `Tile`, different derived classes are to be implemented to define possible actions. The
-Tile base class itself implement the functionality of desert.
+`Tile` base class itself implements the functionality of `desert`.
 * `Desert:` No action is possible on this tile. This is the base class behaviour.
-* `Restaurant`: The number of food items of a player is replenished and will be set to 10. This is
-the initial position of all players.
-* `Spice merchant:` For 2 pieces of gold, a player can purchase 3 sacks of spices (less if the
-player does not have a capacity in his/her cart).
-* `Fabric` Manufactures: For 2 pieces of gold, the player gets three rolls of fabrics tissues
-(less if the player does not have a capacity in his/her cart)
-* `Jeweler:` For 2 pieces of gold, the player gets 3 pieces of jewelry (less if the player does not
-have a capacity in his cart).
-* `Cart Manufacturer:` For 7 pieces of gold, the capacity of the cart is increased by 3.
-* `Small market:` A player can sell 1 roll of fabric, 1 jewel and 1 sack of spices for 8 pieces of
-gold.
-* `Spice market:` A player can sell 3 sacks of spices for 6 pieces of gold.
-* `Jewelry market:` A player can sell 3 pieces of jewelry for 6 pieces of gold.
-* `Fabric market:` A player can sell 3 rolls of fabrics for 6 pieces of gold.
-* `Black market:` For 1 piece of gold, a player can get between 0 and 5 goods at random (less if
-the player does not have a capacity in his/her cart).
-* `Casino:` For 1 piece of gold, the player has 2 in 5 chance to loose, i.e., win 0 pieces of gold, a 3
-out of 10 chance to get 2 pieces of gold, a 2 out of 10 chance to get 3 pieces of gold and a 1 in 10
-chance to win 10 pieces of gold.
+* `Restaurant`: The number of `food` items of a `player` is replenished and will be set to 10. This is
+the initial position of all `players`.
+
+* `Spice merchant:` For 2 pieces of `gold`, a `player` can purchase 3 sacks of `spice`s (less if the
+`player` does not have a capacity in his/her cart).
+
+* `Fabric Manufactures`: For 2 pieces of `gold`, the `player` gets three rolls of `fabric`s tissues
+(less if the `player` does not have a capacity in his/her cart)
+
+* `Jeweler:` For 2 pieces of `gold`, the `player` gets 3 pieces of jewelry(`jewels`) (less if the `player` does not
+have a *capacity* in his cart).
+
+* `Cart Manufacturer:` For 7 pieces of `gold`, the *capacity* of the `cart` is increased by 3.
+* `Small market:` A `player` can sell 1 roll of `fabric`, 1 `jewel` and 1 sack of `spices` for 8 pieces of
+`gold`.
+
+* `Spice market:` A `player` can sell 3 sacks of `spice`s for 6 pieces of `gold`.
+* `Jewelry market:` A `player` can sell 3 pieces of jewelry (`jewels`) for 6 pieces of `gold`.
+* `Fabric market:` A `player` can sell 3 rolls of `fabric`s for 6 pieces of `gold`.
+* `Black market:` For 1 piece of `gold`, a `player` can get between 0 and 5 goods at *random* (less if
+the `player` does not have a capacity in his/her cart).
+
+* `Casino:` For 1 piece of `gold`, the `player` has _2 in 5_ chance to loose, i.e., win 0 pieces of `gold`, a _3
+out of 10_ chance to get 2 pieces of `gold`, a 2 out of 10 chance to get 3 pieces of `gold` and a _1 in 10_
+chance to win 10 pieces of `gold`.
+
 * `Gem Merchant:` A player can buy a ruby. The first ruby costs 12 gold coins, the second ruby to
 be purchased costs 13, the third 14, etc.
 * `Palace:` A player can get a ruby in exchange for 5 rolls of fabrics, 5 pieces of jewelry and 5
 sacks of spices.
 The first player to acquire 5 rubies wins.
 
-### Process
-To build the game board, create a class TileFactory that creates all the above types of tiles in random
-order. The board is to be filled with these tiles. The total number of tiles for a game is input to the get
-function as _nTiles. TileFactory will generate 1/14 of _nTiles of each type of tile and the rest are
-desert tiles. There can only be one instance of a factory class in your program. You must ensure that no
-copies of the TileFactory can be made.
+### Building the gameboard
+To build the game board, create a class `TileFactory` that creates all the above types of `tiles` in random
+order. The `board` is to be filled with these `tile`s. The total number of `tile`s for a game is input to the get
+function as `_nTiles`. `TileFactory` will generate 1/14 of `_nTiles` of each type of `tile` and the rest are
+`desert` tiles. There _can only be one_ instance of a factory class in your program. You *must ensure* that no
+copies of the `TileFactory` can be made.
 The class needs at least the following functions:
 ```c++
 static TileFactory *get(int _nTiles) {
