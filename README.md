@@ -4,6 +4,8 @@ CSI2372_FinalProject
 Group 42's final project.
 
 
+OGGA BOGGA
+
 ##CSI2372 - Final Project - Fall 2014 
 ===================
 ###A Boardgame Over view
