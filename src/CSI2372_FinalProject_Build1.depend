@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1417310526 source:c:\users\rodger\desktop\uottawa\current\csi2372\mywork\csi2372_finalproject_build1\main.cpp
+	<iostream>
+
+1416865896 source:c:\users\rodger\desktop\uottawa\current\csi2372\mywork\csi2372_finalproject_build1\src\player.cpp
+	"Player.h"
+
+1416448809 c:\users\rodger\desktop\uottawa\current\csi2372\mywork\csi2372_finalproject_build1\include\player.h
+
+1416865962 source:c:\users\rodger\desktop\uottawa\current\csi2372\mywork\csi2372_finalproject_build1\src\tile.cpp
+	"Tile.h"
+
+1416866035 c:\users\rodger\desktop\uottawa\current\csi2372\mywork\csi2372_finalproject_build1\include\tile.h
+
+1416867051 source:c:\users\rodger\desktop\uottawa\current\csi2372\mywork\csi2372_finalproject_build1\src\tilefactory.cpp
+	"TileFactory.h"
+
+1416867656 c:\users\rodger\desktop\uottawa\current\csi2372\mywork\csi2372_finalproject_build1\include\tilefactory.h
+	<vector>
+	<string>
+
