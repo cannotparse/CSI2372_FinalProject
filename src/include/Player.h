@@ -13,6 +13,7 @@ class Player
                unsigned int _spice,
                unsigned int _cart,
                unsigned int _food);
+
         bool canAct() const; // returns true if food > 0
         bool pay( Player& player );
         void eat(); // reduces food count by 1 if food > 0
