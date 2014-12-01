@@ -25,6 +25,8 @@ class Tile
 class DesertTile: public Tile {
 
 public:
+    DesertTile();
+
     bool action(Player& player){
         return false;
     }
@@ -33,6 +35,8 @@ public:
 class ResturantTile: public Tile {
 
 public:
+    ResturantTile();
+
     bool action(Player& player) {
         player.Setfood(10);
         return true;
@@ -42,78 +46,108 @@ public:
 class SpiceMerchantTile: public Tile {
 
 public:
+    SpiceMerchantTile();
+
     bool action(Player& player) {
-        // Take 2 gold from player
-        player.Addgold(-2);
-        // Checks the amount in the players cart and how much room thay have left
-        unsigned int playerCartUsed = player.Getusedcartspace();
-        unsigned int playerCartLimit = player.Getcart();
-        unsigned int playerCartDiff = playerCartLimit - playerCartUsed;
-        // Gives player the appropriate amount of spice
-        if(playerCartDiff >= 3) {
-            player.Addspice(3);
-        } else {
-            player.Addspice(playerCartDiff);
+        if(player.getGold() >= 2) {
+            // Take 2 gold from player
+            player.Addgold(-2);
+            // Checks the amount in the players cart and how much room thay have left
+            unsigned int playerCartUsed = player.Getusedcartspace();
+            unsigned int playerCartLimit = player.Getcart();
+            unsigned int playerCartDiff = playerCartLimit - playerCartUsed;
+            // Gives player the appropriate amount of spice
+            if(playerCartDiff >= 3) {
+                player.Addspice(3);
+            } else {
+                player.Addspice(playerCartDiff);
+            }
+            return true;
         }
-        return true;
+        else {
+            return false;
+        }
     }
 };
 
-class FabricManufacturer: public Tile {
+class FabricManufacturerTile: public Tile {
 
 public:
+    FabricManufacturerTile();
+
     bool action(Player& player) {
-        // Take 2 gold from player
-        player.Addgold(-2);
-        // Checks the amount in the players cart and how much room thay have left
-        unsigned int playerCartUsed = player.Getusedcartspace();
-        unsigned int playerCartLimit = player.Getcart();
-        unsigned int playerCartDiff = playerCartLimit - playerCartUsed;
-        // Gives player the appropriate amount of fabric
-        if(playerCartDiff >= 3) {
-            player.Addfabric(3);
-        } else {
-            player.Addfabric(playerCartDiff);
+        if(player.Getgold() >= 2) {
+            // Take 2 gold from player
+            player.Addgold(-2);
+            // Checks the amount in the players cart and how much room thay have left
+            unsigned int playerCartUsed = player.Getusedcartspace();
+            unsigned int playerCartLimit = player.Getcart();
+            unsigned int playerCartDiff = playerCartLimit - playerCartUsed;
+            // Gives player the appropriate amount of fabric
+            if(playerCartDiff >= 3) {
+                player.Addfabric(3);
+            } else {
+                player.Addfabric(playerCartDiff);
+            }
+            return true;
         }
-        return true;
+        else {
+            return false;
+        }
     }
 };
 
-class JewwlerTile: public Tile {
+class JewelerTile: public Tile {
 
 public:
+    JewelerTile();
+
     bool action(Player& player) {
-        // Take 2 gold from player
-        player.Addgold(-2);
-        // Checks the amount in the players cart and how much room thay have left
-        unsigned int playerCartUsed = player.Getusedcartspace();
-        unsigned int playerCartLimit = player.Getcart();
-        unsigned int playerCartDiff = playerCartLimit - playerCartUsed;
-        // Gives player the appropriate amount of jewelry
-        if(playerCartDiff >= 3) {
-            player.Addjewel(3);
-        } else {
-            player.Addjewel(playerCartDiff);
+        if(player.Getgold() >= 2) {
+            // Take 2 gold from player
+            player.Addgold(-2);
+            // Checks the amount in the players cart and how much room thay have left
+            unsigned int playerCartUsed = player.Getusedcartspace();
+            unsigned int playerCartLimit = player.Getcart();
+            unsigned int playerCartDiff = playerCartLimit - playerCartUsed;
+            // Gives player the appropriate amount of jewelry
+            if(playerCartDiff >= 3) {
+                player.Addjewel(3);
+            } else {
+                player.Addjewel(playerCartDiff);
+            }
+            return true;
         }
-        return true;
+        else {
+            return false;
+        }
     }
 };
 
 class CartManufacturerTile: public Tile {
 
 public:
+    CartManufacturerTile();
+
     bool action(Player& player) {
-    // Take 7 gold from player
-    player.Addgold(-7);
-    // Add 3 to capacity of players cart
-    player.Addcart(3);
-    return true;
+        if(player.Getgold() >= 7) {
+            // Take 7 gold from player
+            player.Addgold(-7);
+            // Add 3 to capacity of players cart
+            player.Addcart(3);
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 };
 
 class SmallMarketTile: public Tile {
 
 public:
+    SmallMarketTile();
+
     bool action(Player& player) {
         if(player.Getfabric() >= 1 && player.Getjewel() >= 1 && player.Getspice() >= 1) {
             // Takes stuff from players
@@ -132,6 +166,8 @@ public:
 class SpiceMarketTile: public Tile {
 
 public:
+    SpiceMarketTile();
+
     bool action(Player& player) {
         if(player.Getspice() >= 3) {
             // Takes stuff from player
@@ -148,6 +184,8 @@ public:
 class JewelMarketTile: public Tile {
 
 public:
+    JewelMarketTile();
+
     bool action(Player& player) {
         if(player.Getjewel() >= 3) {
             // Takes stuff from player
@@ -164,6 +202,8 @@ public:
 class FabricMarketTile: public Tile {
 
 public:
+    FabricMarketTile();
+
     bool action(Player& player) {
         if(player.Getspice() >= 3) {
             // Takes stuff from player
@@ -180,22 +220,28 @@ public:
 class BlackMarketTile: public Tile {
 
 public:
+    BlackMarketTile();
+
     bool action(Player& player) {
-        // Takes money from player
-        player.Addgold(-1);
-        // Finds available space in cart
-        unsigned int playerCartUsed = player.Getusedcartspace();
-        unsigned int playerCartLimit = player.Getcart();
-        unsigned int playerCartDiff = playerCartLimit - playerCartUsed;
-        // If size of available cart space is above 5 then call giveItems
-        // with specific bounds. 
-        if(playerCartDiff >= 5) {
-            giveItems(6, player);
-        } 
-        else {
-            giveItems(playerCartDiff + 1, player);
+        if(player.Getgold() >= 1) {
+            // Takes money from player
+            player.Addgold(-1);
+            // Finds available space in cart
+            unsigned int playerCartUsed = player.Getusedcartspace();
+            unsigned int playerCartLimit = player.Getcart();
+            unsigned int playerCartDiff = playerCartLimit - playerCartUsed;
+            // If size of available cart space is above 5 then call giveItems
+            // with specific bounds. 
+            if(playerCartDiff >= 5) {
+                giveItems(6, player);
+            } 
+            else {
+                giveItems(playerCartDiff + 1, player);
+            }
+            return true;
+        } else {
+            return false;
         }
-        return true;
     }
 
     void giveItems(int bounds, Player& player) {
@@ -227,32 +273,38 @@ public:
 class CasinoTile: public Tile {
 
 public:
+    CasinoTile();
 
     bool action(Player& player) {
-        // Take gold from player
-        player.Addgold(-1);
-        // Get random number
-        int randOption = rand() % 10;
-        if(randOption == 0 || randOption == 4 || randOption == 7 || randOption == 9) {
-            player.Addgold(0);
+        if(player.Getgold() >= 1) {
+            // Take gold from player
+            player.Addgold(-1);
+            // Get random number
+            int randOption = rand() % 10;
+            if(randOption == 0 || randOption == 4 || randOption == 7 || randOption == 9) {
+                player.Addgold(0);
+            }
+            else if(randOption == 1 || randOption == 5 || randOption == 8) {
+                player.Addgold(2);
+            }
+            else if(randOption == 2 || randOption == 6) {
+                player.Addgold(3);
+            }
+            else if(randOption == 3) {
+                player.Addgold(10);
+            }
+            return true;
         }
-        else if(randOption == 1 || randOption == 5 || randOption == 8) {
-            player.Addgold(2);
+        else {
+            return false;
         }
-        else if(randOption == 2 || randOption == 6) {
-            player.Addgold(3);
-        }
-        else if(randOption == 3) {
-            player.Addgold(10);
-        }
-        return true;
     }
 };
 
-class GemMerchant: public Tile {
+class GemMerchantTile: public Tile {
 
 public: 
-    GemMerchant(void) : price(12) {}
+    GemMerchantTile(void) : price(12) {}
 
     bool action(Player& player) {
         if(player.Getgold() >= price) {
@@ -267,6 +319,25 @@ public:
 
 private:
     int price;
+};
+
+class PalaceTile: public Tile {
+
+public:
+    PalaceTile();
+
+    bool action(Player& player) {
+        if(player.Getfabric() >= 5 && player.Getjewel() >= 5 && player.Getspice() >= 5) {
+            player.Addfabric(-5);
+            player.Addjewel(-5);
+            player.Addspice(-5);
+            player.Addruby(1);
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 };
 
 
