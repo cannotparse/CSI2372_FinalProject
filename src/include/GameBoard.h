@@ -21,8 +21,13 @@ template<class T, class J, unsigned int N> class GameBoard
          */
         GameBoard(const GameBoard& other) {}
 
+<<<<<<< HEAD
         void add(const T& tile, int row, int col){
             tVec[row][col]=T;
+=======
+        void add(const T& tile, int row, int col) {
+
+>>>>>>> bb93509898a631b4e5e63991d86aef511ba5c30b
         }
 
         const T& getTile(int row, int col) const{
@@ -41,8 +46,11 @@ template<class T, class J, unsigned int N> class GameBoard
             return;
         }
         void setPlayer(J player){
-
+            pMap.erase(player.getName());
+            pMap[player.getName()] = player;
+            return;
         }
+
         J getPlayer(const std::string& playerName){
             return pMap.find(playerName);
         }
@@ -79,6 +87,12 @@ template<class T, class J, unsigned int N> class GameBoard
             }catch (...) {
                  add(tf.next(), x, y);
             }
+<<<<<<< HEAD
+=======
+            catch ( ... ) {
+                add(tf.next(), x, y);
+            }
+>>>>>>> bb93509898a631b4e5e63991d86aef511ba5c30b
 
         }
 
