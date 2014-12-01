@@ -12,7 +12,8 @@ class Player
                unsigned int _jewel,
                unsigned int _spice,
                unsigned int _cart,
-               unsigned int _food);
+               unsigned int _food,
+               string name);
 
         bool canAct() const; // returns true if food > 0
         bool pay( Player& player );
@@ -48,11 +49,14 @@ class Player
         void Setfood(unsigned int val);
         void Addfood(unsigned int val);
 
+        string getName() { return name; }
+
         unsigned int Getusedcartspace();
         unsigned int Addusedcartspace(unsigned int val);
 
     protected:
     private:
+        string name;
         int x;
         int y;
         unsigned int gold;
