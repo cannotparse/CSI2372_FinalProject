@@ -5,39 +5,48 @@
 1416865896 source:c:\users\rodger\desktop\uottawa\current\csi2372\mywork\csi2372_finalproject_build1\src\player.cpp
 	"Player.h"
 
-1416448809 c:\users\rodger\desktop\uottawa\current\csi2372\mywork\csi2372_finalproject_build1\include\player.h
+1417328870 c:\users\rodger\desktop\uottawa\current\csi2372\mywork\csi2372_finalproject_build1\include\player.h
 
 1416865962 source:c:\users\rodger\desktop\uottawa\current\csi2372\mywork\csi2372_finalproject_build1\src\tile.cpp
 	"Tile.h"
 
-1416866035 c:\users\rodger\desktop\uottawa\current\csi2372\mywork\csi2372_finalproject_build1\include\tile.h
+1417419087 c:\users\rodger\desktop\uottawa\current\csi2372\mywork\csi2372_finalproject_build1\include\tile.h
 
-1416867051 source:c:\users\rodger\desktop\uottawa\current\csi2372\mywork\csi2372_finalproject_build1\src\tilefactory.cpp
+1417415853 source:c:\users\rodger\desktop\uottawa\current\csi2372\mywork\csi2372_finalproject_build1\src\tilefactory.cpp
 	"TileFactory.h"
+	<cmath>
+	<iostream>
+	<random>
 
-1416867656 c:\users\rodger\desktop\uottawa\current\csi2372\mywork\csi2372_finalproject_build1\include\tilefactory.h
+1417414072 c:\users\rodger\desktop\uottawa\current\csi2372\mywork\csi2372_finalproject_build1\include\tilefactory.h
+	"Tile.h"
 	<vector>
 	<string>
 
-1417413616 source:/Users/ColeClifford/CSI2372_FinalProject/src/main.cpp
+1417419362 source:/Users/ColeClifford/CSI2372_FinalProject/src/main.cpp
 	<iostream>
 
-1417332017 source:/Users/ColeClifford/CSI2372_FinalProject/src/src/Player.cpp
+1417419362 source:/Users/ColeClifford/CSI2372_FinalProject/src/src/Player.cpp
 	"Player.h"
 
-1417331971 /Users/ColeClifford/CSI2372_FinalProject/src/include/Player.h
+1417419569 /Users/ColeClifford/CSI2372_FinalProject/src/include/Player.h
 
-1417321718 source:/Users/ColeClifford/CSI2372_FinalProject/src/src/Tile.cpp
+1417418085 source:/Users/ColeClifford/CSI2372_FinalProject/src/src/Tile.cpp
 	"Tile.h"
 
-1417415221 /Users/ColeClifford/CSI2372_FinalProject/src/include/Tile.h
+1417419666 /Users/ColeClifford/CSI2372_FinalProject/src/include/Tile.h
 	"Player.h"
 	<stdlib.h>
 
-1417318213 source:/Users/ColeClifford/CSI2372_FinalProject/src/src/TileFactory.cpp
+1417419569 source:/Users/ColeClifford/CSI2372_FinalProject/src/src/TileFactory.cpp
 	"TileFactory.h"
+	<cmath>
+	<iostream>
+	<random>
+	<algorithm>
 
-1417318213 /Users/ColeClifford/CSI2372_FinalProject/src/include/TileFactory.h
+1417419569 /Users/ColeClifford/CSI2372_FinalProject/src/include/TileFactory.h
+	"Tile.h"
 	<vector>
 	<string>
 

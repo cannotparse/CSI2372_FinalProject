@@ -3,9 +3,6 @@ CSI2372_FinalProject
 
 Group 42's final project.
 
-
-OGGA BOGGA
-
 ##CSI2372 - Final Project - Fall 2014 
 ===================
 ###A Boardgame Over view
@@ -32,6 +29,8 @@ as `tiles`. The `GameBoard` class requires the following functions:
 
 If applicable, these methods should return an exception of type `std::out_of_range`.
 
+####setPLayer
+
 ###Tile
 Create a base class `Tile` which will let players execute *actions*. The function of action should only
 permit players to execute an action if this action is possible.
@@ -39,6 +38,10 @@ permit players to execute an action if this action is possible.
 * `virtual bool action( Player& player );`
 * `virtual Tile* clone();`
 * `ostream& operator<<`
+
+####action 
+Performs the action of this tile on the player. It is contained within a loop that verifies the player. Double check that the player has the right amount of stuff to do the action.
+Send exception if it doesn't work. 
 
 ###Player
 Create a `Player` class that will hold all the *items* a player has in his/her possession. The player
@@ -52,9 +55,12 @@ is carrying these items in a `cart` with limited capacity. You will need the _cl
 * `food` : The number of food items`
 
 * `bool canAct() const; // returns true if food > 0`
-* `bool pay( Player& player );`
+* `bool pay( Player& player, unsigned int amount );`
 * `void eat(); // reduces food count by 1 if food > 0`
-* 
+
+
+
+###The Game Rules
 Each `player` starts with 5 pieces of `gold`, no `ruby`, 1 sack of `spices`, 1 roll of `fabric`, 1 `jewel`, and 10 `food`
 items. The `cart` has an _initial_ capacity of 9, which is the _maximum number of goods_ (`spice`'s, `fabric`'s,
 `jewelry`(jewels) and `ruby`(rubies) ) that a `player` can have at one time. When a player moves to a `tile`, the `player` can choose to perform an action corresponding to the type of the `tile`. Each action *costs* a player a `food` item.

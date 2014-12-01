@@ -258,9 +258,10 @@ public:
         if(player.Getgold() >= price) {
             player.Addgold(-price);
             player.Addruby(1);
+            price++;
             return true;
         } else {
-            return fale;
+            return false;
         }
     }
 
