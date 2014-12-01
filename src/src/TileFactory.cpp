@@ -9,33 +9,47 @@
 Tile* maker(unsigned int j){
     switch (j){
         case 0:
-                return 0;// Desert
+        	DesertTile tile();
+            return tile;// Desert
         case 1:
-                return 0;// Restaurant
+        	ResturantTile tile();
+            return tile;// Restaurant
         case 2:
-            return 0;// spice merchant
+        	SpiceMerchantTile tile();
+            return tile;// spice merchant
         case 3:
-            return 0;// fabric man
+        	FabricManufacturerTile tile();
+            return tile;// fabric man
         case 4:
-            return 0;// jeweler
+        	JewelerTile tile();
+            return tile;// jeweler
         case 5:
-            return 0;// cart man
+        	CartManufacturerTile tile();
+            return tile;// cart man
         case 6:
-            return 0;// small market
+        	SmallMarketTile tile();
+            return tile;// small market
         case 7:
-            return 0;// spice market
+        	SpiceMarketTile tile();
+            return tile;// spice market
         case 8:
-            return 0;// jewelry market
+        	JewelMarketTile tile();
+            return tile;// jewelry market
         case 9:
-            return 0;// fabric market
+        	FabricMarketTile tile();
+            return tile;// fabric market
         case 10:
-            return 0;// black market
+	        BlackMarketTile tile();
+            return tile;// black market
         case 11:
-            return 0;// casion
+        	CasinoTile tile();
+            return tile;// casion
         case 12:
-            return 0;// gem merhcant
+        	GemMerchantTile tile();
+            return tile;// gem merhcant
         case 13:
-            return 0;// palace
+        	PalaceTile tile();
+            return tile;// palace
     }
 }
 

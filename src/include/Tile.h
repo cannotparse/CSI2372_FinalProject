@@ -3,6 +3,7 @@
 
 #include "Player.h"
 #include <stdlib.h> 
+#include <vector>
 
 class Tile
 {
@@ -20,6 +21,7 @@ class Tile
 
     protected:
     private:
+        
 };
 
 class DesertTile: public Tile {
