@@ -21,11 +21,11 @@ as `tiles`. The `GameBoard` class requires the following functions:
 * `void add(const T& tile, int row, int col);`
 * `const T& getTile(int row, int col) const;`
 * `void getCoordinate(const T &tile, int *row, int *col) const;`
-* `void setPlayer(J player);`
-* `J getPlayer(const std::string& playerName);`
+* `public void setPlayer(J player);`
+* `public J getPlayer(const std::string& playerName);`
 * `const T& getTile(const std::string& playerName) const;`
-* `std::vector<J> getPlayers(const T& tile) const;`
-* `const T& move(Enum Move move, const std::string& playerName );`
+* `public std::vector<J> getPlayers(const T& tile) const;`
+* `public const T& move(Enum Move move, const std::string& playerName );`
 
 If applicable, these methods should return an exception of type `std::out_of_range`.
 
