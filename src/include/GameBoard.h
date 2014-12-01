@@ -21,13 +21,8 @@ template<class T, class J, unsigned int N> class GameBoard
          */
         GameBoard(const GameBoard& other) {}
 
-<<<<<<< HEAD
         void add(const T& tile, int row, int col){
             tVec[row][col]=T;
-=======
-        void add(const T& tile, int row, int col) {
-
->>>>>>> bb93509898a631b4e5e63991d86aef511ba5c30b
         }
 
         const T& getTile(int row, int col) const{

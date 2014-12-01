@@ -1,8 +1,6 @@
 #include "Player.h"
 
-bool Player::canAct() const{// returns true if food > 0
-    return true;
-}
+
 bool Player::pay( Player& player ){
     if(gold>1){
         player.Addgold(1u);
@@ -10,8 +8,6 @@ bool Player::pay( Player& player ){
         return true;
     }
     return false;
-}
-void Player::eat(){ // reduces food count by 1 if food > 0
 }
 
 
@@ -56,13 +52,13 @@ void Player::getCoords(int * _x, int * _y){
     return;
 }
 
-void eat() {
+void Player::eat() {
     if(food > 0) {
         Player::Addfood(-1);
     }
 }
 
-bool canAct() {
+bool Player::canAct() {
     if(food > 0) {
         return true;
     }
