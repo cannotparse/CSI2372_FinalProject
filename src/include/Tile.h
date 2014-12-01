@@ -15,7 +15,6 @@ class Tile
         Tile(const Tile& other);
     protected:
     private:
-
 };
 
 
