@@ -1,7 +1,7 @@
 #include <iostream>
 
 int main()
-{
+{/*
 
   bool takeTurn(BoardGame<Tile, Player, N, N>& bg, const std::string& pName) {
 
@@ -26,15 +26,15 @@ int main()
         }
       }
       return true;
-    } 
+    }
     catch ( std::istream::failure e ) {
       cout<< “Incorrect key pressed”; cin.clear(); }
-    } 
+    }
     catch ( std::out_of_range e ) {
       cout<< e.what();
     }
     return false;
-  }
+  }*/
     /*
         if game is paused
           resume
@@ -57,5 +57,5 @@ int main()
             if Player has 5 Rubies player has won
         */
 
-    
+
 }

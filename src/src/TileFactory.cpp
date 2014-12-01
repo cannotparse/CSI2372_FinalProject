@@ -95,5 +95,6 @@ TileFactory::~TileFactory()
 }
 
 Tile* TileFactory::next(){
-    return 0;//tiles.pop_back();
+    Tile * tile = tiles.back();
+    return tile;
 }

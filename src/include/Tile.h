@@ -12,7 +12,7 @@ class Tile
         /** Default destructor */
         virtual ~Tile();
 
-        bool operator == (const Tile &t);
+        bool operator == (const Tile &t)const;
 
         virtual bool action(Player& player){ return false;}
 
