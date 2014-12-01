@@ -22,7 +22,7 @@ template<class T, class J, unsigned int N> class GameBoard
         GameBoard(const GameBoard& other) {}
 
         void add(const T& tile, int row, int col){
-
+            tVec[row][col]=T;
         }
 
         const T& getTile(int row, int col) const{
@@ -47,7 +47,10 @@ template<class T, class J, unsigned int N> class GameBoard
             return pMap.find(playerName);
         }
         const T& getTile(const std::string& playerName) const{
-            pMap.find(playerName).getCoords()
+            int *x;
+            int *y;
+            pMap.find(playerName).getCoords(x,y);
+            return tVec[x][y];
         }
         std::vector<J> getPlayers(const T& tile) const{
             return tile.getPlayers();
@@ -73,10 +76,9 @@ template<class T, class J, unsigned int N> class GameBoard
                         break;
                 }
                 return getTile(x, y);
+            }catch (...) {
+                 add(tf.next(), x, y);
             }
-            // catch ( *** Find Error Type *** ) {
-            //     add(tf.next(), x, y);
-            // }
 
         }
 
