@@ -1,6 +1,6 @@
 #ifndef PLAYER_H
 #define PLAYER_H
-
+#include <string>
 
 class Player
 {
@@ -13,7 +13,7 @@ class Player
                unsigned int _spice,
                unsigned int _cart,
                unsigned int _food,
-               string name);
+               std::string _name);
 
         bool canAct() const; // returns true if food > 0
         bool pay( Player& player );
@@ -49,14 +49,14 @@ class Player
         void Setfood(unsigned int val);
         void Addfood(unsigned int val);
 
-        string getName() { return name; }
+       std::string getName() { return name; }
 
         unsigned int Getusedcartspace();
         unsigned int Addusedcartspace(unsigned int val);
 
     protected:
     private:
-        string name;
+        std::string name;
         int x;
         int y;
         unsigned int gold;

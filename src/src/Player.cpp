@@ -17,7 +17,8 @@ Player::Player(unsigned int _gold,
                unsigned int _jewel,
                unsigned int _spice,
                unsigned int _cart,
-               unsigned int _food)
+               unsigned int _food,
+               std::string _name)
                :
                 gold(_gold),
                 ruby(_ruby),
@@ -25,7 +26,8 @@ Player::Player(unsigned int _gold,
                 jewel(_jewel),
                 spice(_spice),
                 cart(_cart),
-                food(_food)
+                food(_food),
+                name(_name)
 {
     //ctor
 }
@@ -58,7 +60,7 @@ void Player::eat() {
     }
 }
 
-bool Player::canAct() {
+bool Player::canAct() const{
     if(food > 0) {
         return true;
     }

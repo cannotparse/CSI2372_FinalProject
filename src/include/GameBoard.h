@@ -4,7 +4,7 @@
 #include "TileFactory.h"
 
 
-template<class T, class J, unsigned int N> class GameBoard
+template<class T, class J, unsigned int N, unsigned int M> class GameBoard
 {
     private:
             std::map<string,J> pMap;
@@ -13,7 +13,19 @@ template<class T, class J, unsigned int N> class GameBoard
     public:
         enum Move {UP, DOWN, LEFT, RIGHT};
         /** Default constructor */
-        GameBoard():tf(TileFactory.get()){}
+        GameBoard():tf(TileFactory.get(n*m)){
+            std::vector<const T&> a;
+            for(int i =0; i< N;i++){
+                a = std::vector<const T&>;
+                tVec.push(a);
+            }
+
+            for(int i = 0; i<N;i++){
+                for(int j =0); j<M;++){
+                    tVec[]
+                }
+            }
+        }
         /** Default destructor */
         virtual ~GameBoard() {}
         /** Copy constructor
@@ -82,14 +94,7 @@ template<class T, class J, unsigned int N> class GameBoard
             }catch (...) {
                  add(tf.next(), x, y);
             }
-<<<<<<< HEAD
-=======
-            catch ( ... ) {
-                add(tf.next(), x, y);
-            }
->>>>>>> bb93509898a631b4e5e63991d86aef511ba5c30b
 
-        }
 
     protected:
     private:
