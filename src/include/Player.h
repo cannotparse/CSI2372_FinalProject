@@ -21,25 +21,29 @@ class Player
         Player(const Player& other);
 
         unsigned int Getgold();
-        void Setgold(unsigned int val);
+        void Addgold(unsigned int val);
 
         unsigned int Getruby();
-        void Setruby(unsigned int val);
+        void Addruby(unsigned int val);
 
         unsigned int Getfabric();
-        void Setfabric(unsigned int val);
+        void Addfabric(unsigned int val);
 
         unsigned int Getjewel();
-        void Setjewel(unsigned int val);
+        void Addjewel(unsigned int val);
 
         unsigned int Getspice();
-        void Setspice(unsigned int val);
+        void Addspice(unsigned int val);
 
         unsigned int Getcart();
-        void Setcart(unsigned int val);
+        void Addcart(unsigned int val);
 
         unsigned int Getfood();
         void Setfood(unsigned int val);
+        void Addfood(unsigned int val);
+
+        unsigned int Getusedcartspace();
+        unsigned int Addusedcartspace(unsigned int val);
 
     protected:
     private:
@@ -50,6 +54,7 @@ class Player
         unsigned int spice;
         unsigned int cart;
         unsigned int food;
+        unsigned int usedCartSpace;
 };
 
 #endif // PLAYER_H

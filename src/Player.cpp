@@ -1,6 +1,6 @@
 #include "Player.h"
 
-bool canAct() const{// returns true if food > 0
+bool canAct() {// returns true if food > 0
 
 }
 bool pay( Player& player ){
