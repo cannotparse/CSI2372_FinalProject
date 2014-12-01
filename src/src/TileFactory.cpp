@@ -8,35 +8,35 @@
 
 Tile* maker(unsigned int j){
     switch (j){
-    case 0:
-            return 0;// Desert
-    case 1:
-            return 0;// Restaurant
-    case 2:
-    return 0;// spice merchant
-    case 3:
-    return 0;// fabric man
-    case 4:
-    return 0;// jeweler
-    case 5:
-    return 0;// cart man
-    case 6:
-    return 0;// small market
-    case 7:
-    return 0;// spice market
-    case 8:
-    return 0;// jewelry market
-    case 9:
-    return 0;// fabric market
-    case 10:
-    return 0;// black market
-    case 11:
-    return 0;// casion
-    case 12:
-    return 0;// gem merhcant
-    case 13:
-    return 0;// palace
-}
+        case 0:
+                return 0;// Desert
+        case 1:
+                return 0;// Restaurant
+        case 2:
+            return 0;// spice merchant
+        case 3:
+            return 0;// fabric man
+        case 4:
+            return 0;// jeweler
+        case 5:
+            return 0;// cart man
+        case 6:
+            return 0;// small market
+        case 7:
+            return 0;// spice market
+        case 8:
+            return 0;// jewelry market
+        case 9:
+            return 0;// fabric market
+        case 10:
+            return 0;// black market
+        case 11:
+            return 0;// casion
+        case 12:
+            return 0;// gem merhcant
+        case 13:
+            return 0;// palace
+    }
 }
 
 TileFactory::TileFactory(int& _ntiles):ntiles(_ntiles)
@@ -78,5 +78,5 @@ TileFactory::~TileFactory()
 }
 
 Tile* TileFactory::next(){
-    return tiles.pop_back();
+    return 0;//tiles.pop_back();
 }
