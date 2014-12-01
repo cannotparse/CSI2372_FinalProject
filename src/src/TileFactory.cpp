@@ -8,35 +8,49 @@
 
 Tile* maker(unsigned int j){
     switch (j){
-    case 0:
-            return 0;// Desert
-    case 1:
-            return 0;// Restaurant
-    case 2:
-    return 0;// spice merchant
-    case 3:
-    return 0;// fabric man
-    case 4:
-    return 0;// jeweler
-    case 5:
-    return 0;// cart man
-    case 6:
-    return 0;// small market
-    case 7:
-    return 0;// spice market
-    case 8:
-    return 0;// jewelry market
-    case 9:
-    return 0;// fabric market
-    case 10:
-    return 0;// black market
-    case 11:
-    return 0;// casion
-    case 12:
-    return 0;// gem merhcant
-    case 13:
-    return 0;// palace
-}
+        case 0:
+        	DesertTile tile();
+            return tile;// Desert
+        case 1:
+        	ResturantTile tile();
+            return tile;// Restaurant
+        case 2:
+        	SpiceMerchantTile tile();
+            return tile;// spice merchant
+        case 3:
+        	FabricManufacturerTile tile();
+            return tile;// fabric man
+        case 4:
+        	JewelerTile tile();
+            return tile;// jeweler
+        case 5:
+        	CartManufacturerTile tile();
+            return tile;// cart man
+        case 6:
+        	SmallMarketTile tile();
+            return tile;// small market
+        case 7:
+        	SpiceMarketTile tile();
+            return tile;// spice market
+        case 8:
+        	JewelMarketTile tile();
+            return tile;// jewelry market
+        case 9:
+        	FabricMarketTile tile();
+            return tile;// fabric market
+        case 10:
+	        BlackMarketTile tile();
+            return tile;// black market
+        case 11:
+        	CasinoTile tile();
+            return tile;// casion
+        case 12:
+        	GemMerchantTile tile();
+            return tile;// gem merhcant
+        case 13:
+        	PalaceTile tile();
+            return tile;// palace
+    }
 }
 
 TileFactory::TileFactory(int& _ntiles):ntiles(_ntiles)
@@ -78,5 +92,5 @@ TileFactory::~TileFactory()
 }
 
 Tile* TileFactory::next(){
-    return tiles.pop_back();
+    return 0;//tiles.pop_back();
 }
