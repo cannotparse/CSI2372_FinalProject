@@ -1,7 +1,5 @@
 #include <iostream>
 
-using namespace std;
-
 int main()
 {
     /*
@@ -25,4 +23,8 @@ int main()
             Display Player status
             if Player has 5 Rubies player has won
         */
+
+    for(int i = 0; i <= 10; i++) {
+      std::cout << i << std::endl;
+    }
 }
