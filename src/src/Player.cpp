@@ -56,6 +56,21 @@ void Player::getCoords(int * _x, int * _y){
     return;
 }
 
+void eat() {
+    if(food > 0) {
+        Player::Addfood(-1);
+    }
+}
+
+bool canAct() {
+    if(food > 0) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
 unsigned int Player::Getusedcartspace(){
     return cart - (ruby+fabric+jewel+spice+food);
 }
