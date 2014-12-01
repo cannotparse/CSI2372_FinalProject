@@ -40,6 +40,16 @@ template<class T, class J, unsigned int N> class GameBoard
             }
             return;
         }
+
+        bool hasPlayerWon() {
+            for(std::map<string,J>::iterator it = pMap.begin(); it != pMap.end(); ++it) {
+                if( (it->second).Getruby() >= 5 ) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         void setPlayer(J player){
             pMap.erase(player.getName());
             pMap[player.getName()] = player;
@@ -82,13 +92,14 @@ template<class T, class J, unsigned int N> class GameBoard
             }catch (...) {
                  add(tf.next(), x, y);
             }
-<<<<<<< HEAD
-=======
-            catch ( ... ) {
-                add(tf.next(), x, y);
-            }
->>>>>>> bb93509898a631b4e5e63991d86aef511ba5c30b
+        }
 
+        void addPlayer(pName, player) {
+            pMap[pName] = player;
+        }
+
+        std::map<string,J> getAllPlayers() {
+            return pMap;
         }
 
     protected:
