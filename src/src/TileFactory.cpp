@@ -7,50 +7,53 @@
 
 
 Tile* maker(unsigned int j){
+    Tile tile;
     switch (j){
         case 0:
-        	DesertTile tile();
-            return tile;// Desert
+            break;
         case 1:
-        	ResturantTile tile();
-            return tile;// Restaurant
+
+            tile = ResturantTile();// Restaurant
+            break;
         case 2:
-        	SpiceMerchantTile tile();
-            return tile;// spice merchant
+            tile = SpiceMerchantTile();// spice merchant
+            break;
         case 3:
-        	FabricManufacturerTile tile();
-            return tile;// fabric man
+            tile = FabricManufacturerTile();// fabric man
+            break;
         case 4:
-        	JewelerTile tile();
-            return tile;// jeweler
+            tile = JewelerTile();// jeweler
+            break;
         case 5:
-        	CartManufacturerTile tile();
-            return tile;// cart man
+            tile = CartManufacturerTile();// cart man
+            break;
         case 6:
-        	SmallMarketTile tile();
-            return tile;// small market
+            tile = SmallMarketTile();// small market
+            break;
         case 7:
-        	SpiceMarketTile tile();
-            return tile;// spice market
+            tile = SpiceMarketTile();// spice market
+            break;
         case 8:
-        	JewelMarketTile tile();
-            return tile;// jewelry market
+            tile = JewelMarketTile();// jewelry market
+            break;
         case 9:
-        	FabricMarketTile tile();
-            return tile;// fabric market
+            tile = FabricMarketTile();// fabric market
+            break;
         case 10:
-	        BlackMarketTile tile();
-            return tile;// black market
+            tile = BlackMarketTile();// black market
+            break;
         case 11:
-        	CasinoTile tile();
-            return tile;// casion
+            tile = CasinoTile();// casion
+            break;
         case 12:
-        	GemMerchantTile tile();
-            return tile;// gem merhcant
+            tile = GemMerchantTile();// gem merhcant
+            break;
         case 13:
-        	PalaceTile tile();
-            return tile;// palace
+            tile = PalaceTile();// palace
+            break;
     }
+    Tile* t = &tile;
+    return t;
 }
 
 TileFactory::TileFactory(int& _ntiles):ntiles(_ntiles)

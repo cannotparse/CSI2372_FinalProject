@@ -55,6 +55,11 @@ void Player::getCoords(int * _x, int * _y){
     *_y=y;
     return;
 }
+
+unsigned int Player::Getusedcartspace(){
+    return cart - (ruby+fabric+jewel+spice+food);
+}
+
 //Getters and Setters
         unsigned int Player::Getgold() { return gold; }
         void Player::Addgold(unsigned int val) { gold += val; }

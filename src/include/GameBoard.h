@@ -9,10 +9,11 @@ template<class T, class J, unsigned int N> class GameBoard
     private:
             std::map<string,J> pMap;
             std::vector<std::vector<const T&>> tVec;
+            TileFactory tf;
     public:
         enum Move {UP, DOWN, LEFT, RIGHT};
         /** Default constructor */
-        GameBoard() {}
+        GameBoard():tf(TileFactory.get()){}
         /** Default destructor */
         virtual ~GameBoard() {}
         /** Copy constructor
@@ -37,12 +38,13 @@ template<class T, class J, unsigned int N> class GameBoard
                     }
                 }
             }
+            return;
         }
         void setPlayer(J player){
 
         }
         J getPlayer(const std::string& playerName){
-
+            return pMap.find(playerName);
         }
         const T& getTile(const std::string& playerName) const{
             pMap.find(playerName).getCoords()
