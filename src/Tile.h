@@ -17,5 +17,4 @@ class Tile
     private:
 };
 
-class
 #endif // TILE_H

@@ -48,22 +48,23 @@ Player::Player(const Player& other):
 
 //Getters and Setters
         unsigned int Player::Getgold() { return gold; }
-        void Player::Setgold(unsigned int val) { gold = val; }
+        void Player::Addgold(unsigned int val) { gold += val; }
 
         unsigned int Player::Getruby() { return ruby; }
-        void Player::Setruby(unsigned int val) { ruby = val; }
+        void Player::Addruby(unsigned int val) { ruby += val; }
 
         unsigned int Player::Getfabric() { return fabric; }
-        void Player::Setfabric(unsigned int val) { fabric = val; }
+        void Player::Addfabric(unsigned int val) { fabric += val; }
 
         unsigned int Player::Getjewel() { return jewel; }
-        void Player::Setjewel(unsigned int val) { jewel = val; }
+        void Player::Addjewel(unsigned int val) { jewel += val; }
 
         unsigned int Player::Getspice() { return spice; }
-        void Player::Setspice(unsigned int val) { spice = val; }
+        void Player::Addspice(unsigned int val) { spice += val; }
 
         unsigned int Player::Getcart() { return cart; }
-        void Player::Setcart(unsigned int val) { cart = val; }
+        void Player::Addcart(unsigned int val) { cart += val; }
 
         unsigned int Player::Getfood() { return food; }
         void Player::Setfood(unsigned int val) { food = val; }
+        void Player::Addfood(unsigned int val) { food += val; }
