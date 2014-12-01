@@ -21,6 +21,11 @@ class Player
         virtual ~Player();
         Player(const Player& other);
 
+        void getCoords(int * _x, int * _y);
+
+        int setX(int _x);
+        int setY(int _y);
+
         unsigned int Getgold();
         void Addgold(unsigned int val);
 
@@ -48,6 +53,8 @@ class Player
 
     protected:
     private:
+        int x;
+        int y;
         unsigned int gold;
         unsigned int ruby;
         unsigned int fabric;

@@ -6,7 +6,9 @@
 
 template<class T, class J, unsigned int N> class GameBoard
 {
-
+    private:
+            std::map<string,J> pMap;
+            std::vector<std::vector<const T&>> tVec;
     public:
         enum Move {UP, DOWN, LEFT, RIGHT};
         /** Default constructor */
@@ -23,10 +25,18 @@ template<class T, class J, unsigned int N> class GameBoard
         }
 
         const T& getTile(int row, int col) const{
-
+            return tVec[row][col];
         }
         void getCoordinate(const T &tile, int *row, int *col) const{
-
+            for(int i =0; i<tVec.length){
+                for(int j = 0;j<tVec[i].length;j++){
+                    if(tile == tVec[i][j]){
+                        row=i;
+                        col=j;
+                        return;
+                    }
+                }
+            }
         }
         void setPlayer(J player){
 
@@ -35,10 +45,10 @@ template<class T, class J, unsigned int N> class GameBoard
 
         }
         const T& getTile(const std::string& playerName) const{
-
+            pMap.find(playerName).getCoords()
         }
         std::vector<J> getPlayers(const T& tile) const{
-
+            return tile.getPlayers();
         }
         const T& move(Enum Move move, const std::string& playerName ) {
 
@@ -61,7 +71,7 @@ template<class T, class J, unsigned int N> class GameBoard
                         break;
                 }
                 return getTile(x, y);
-            } 
+            }
             // catch ( *** Find Error Type *** ) {
             //     add(tf.next(), x, y);
             // }

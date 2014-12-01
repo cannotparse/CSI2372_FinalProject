@@ -2,7 +2,7 @@
 #define TILE_H
 
 #include "Player.h"
-#include <stdlib.h> 
+#include <stdlib.h>
 
 class Tile
 {
@@ -49,7 +49,7 @@ public:
     SpiceMerchantTile();
 
     bool action(Player& player) {
-        if(player.getGold() >= 2) {
+        if(player.Getgold() >= 2) {
             // Take 2 gold from player
             player.Addgold(-2);
             // Checks the amount in the players cart and how much room thay have left
@@ -231,10 +231,10 @@ public:
             unsigned int playerCartLimit = player.Getcart();
             unsigned int playerCartDiff = playerCartLimit - playerCartUsed;
             // If size of available cart space is above 5 then call giveItems
-            // with specific bounds. 
+            // with specific bounds.
             if(playerCartDiff >= 5) {
                 giveItems(6, player);
-            } 
+            }
             else {
                 giveItems(playerCartDiff + 1, player);
             }
@@ -251,7 +251,7 @@ public:
             randOption = rand() % 4;
             if(randOption == 0) {
                 player.Addruby(1);
-            } 
+            }
             else if(randOption == 1) {
                 player.Addspice(1);
             }
@@ -303,7 +303,7 @@ public:
 
 class GemMerchantTile: public Tile {
 
-public: 
+public:
     GemMerchantTile(void) : price(12) {}
 
     bool action(Player& player) {

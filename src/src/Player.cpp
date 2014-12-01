@@ -4,7 +4,12 @@ bool Player::canAct() const{// returns true if food > 0
     return true;
 }
 bool Player::pay( Player& player ){
-    return 0;
+    if(gold>1){
+        player.Addgold(1u);
+        gold--;
+        return true;
+    }
+    return false;
 }
 void Player::eat(){ // reduces food count by 1 if food > 0
 }
@@ -45,7 +50,11 @@ Player::Player(const Player& other):
 {
     //copy ctor
 }
-
+void Player::getCoords(int * _x, int * _y){
+    *_x=x;
+    *_y=y;
+    return;
+}
 //Getters and Setters
         unsigned int Player::Getgold() { return gold; }
         void Player::Addgold(unsigned int val) { gold += val; }
